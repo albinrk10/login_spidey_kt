@@ -3,28 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:theme="@style/AppTheme.Red"
     android:layout_height="match_parent"
     android:background="@android:color/white">
 
 
-    <ImageView
-        android:id="@+id/ivLoginLogo"
-        android:layout_width="160dp"
-        android:layout_height="120dp"
-        android:src="@drawable/ic_spidey"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-        />
+
+        layout="@layout/merge_logo"
+    />
 
     <EditText
+        
         android:id="@+id/etLoginUsername"
+        style="@style/AppTheme.EditTextStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
         android:drawableStart="@drawable/vector_person"
-        android:drawablePadding="12dp"
         android:hint="@string/hint_usuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,16 +32,27 @@
 
     <EditText
         android:id="@+id/editText"
+        style="@style/AppTheme.EditTextStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/vector_lock"
-        android:drawablePadding="12dp"
-        android:layout_margin="12dp"
         android:hint="@string/hint_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etLoginUsername" />
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_kfc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"/>
     <Button
 
         android:id="@+id/button"
